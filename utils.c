@@ -1,18 +1,16 @@
-#include <sys/times.h>
+#include <minix/clock.h>
 #include <stdio.h>
 #include "utils.h"
 
 double get_clock(){
 
-    // Definindo variaveis de estruturas de tempo do sistema
-    struct tms time_info;
     clock_t current_time;
 
     // Coloca em current_time o tempo em que o sistema está acordado em ticks de clock 
-    current_time = times(&time_info);
+    get_uptime(&current_time);
 
     if (current_time == (clock_t)-1) {
-        printf("Erro de driver: NImpossivel de obter o clock do sistema");
+        printf("Erro de driver: Impossivel de obter o clock do sistema");
         return -1;
     }
 
@@ -30,3 +28,4 @@ unsigned int native_rand(unsigned int max){
     return (unsigned int)expression % max;
 }
 
+clock_t uptime_ticks;

@@ -12,7 +12,7 @@ double get_clock(){
     current_time = times(&time_info);
 
     if (current_time == (clock_t)-1) {
-        perror("Erro ao obter o tempo do sistema");
+        printf("Erro de driver: NImpossivel de obter o clock do sistema");
         return -1;
     }
 

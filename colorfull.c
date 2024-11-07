@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <minix/syslib.h>
 #include "colors.h"
 
+int main(int argc, char **argv){
 
-int main(){
+    sef_startup();
+
     const char *radom_color = get_radom_color();
+    printf("%s", radom_color);
 
-    printf("%s Teste", radom_color);
-
-    return 0;
+    return EXIT_SUCCESS;
 }

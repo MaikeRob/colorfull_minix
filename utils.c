@@ -10,12 +10,14 @@ double get_seed(){
 
 // Retorna um numero pseudo aleatorio com um intervalo maximo de acordo com max
 unsigned int native_rand(unsigned int max){
-    double seed = get_seed();
-
+    static unsigned int seed = 0; 
+    if (seed == 0) {
+      seed = get_seed();
+    }
     // Criacao de um numero pseudoaleatorio
-    double expression = (3.9 * seed * (1 - seed));
+    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
 
     // Retorna o numero usando mod para deixa-lo no intervalo pretendido
-    return (unsigned int)expression % max;
+    return seed % max;
 }
 

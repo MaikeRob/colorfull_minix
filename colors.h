@@ -25,8 +25,6 @@ extern const unsigned int NUM_COLORS;
 
 extern const char *colors[];
 
-extern const char *get_radom_color();
-
 extern const char *native_get_radom_color();
 
 #endif

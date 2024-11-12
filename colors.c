@@ -15,8 +15,3 @@ const char *native_get_radom_color(){
     return colors[rand_number];
 }
 
-const char *get_radom_color(){
-    srand(get_clock());
-    int rand_number = rand() % NUM_COLORS;
-    return colors[rand_number];
-}

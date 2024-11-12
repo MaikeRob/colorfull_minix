@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <minix/syslib.h>
 #include "colors.h"
 

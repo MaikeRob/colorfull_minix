@@ -16,7 +16,6 @@ Este projeto implementa um driver de caracteres para MINIX que gera cores aleat�
 Grande parte da instalação é parecida com o tuturial da wiki do MINIX
 (Programming Device Drivers in Minix)[https://wiki.minix3.org/doku.php?id=developersguide:driverprogramming]
 
-
 Navegue até a pasta dos drivers na fonte do MINIX
 
 ```bash
@@ -25,7 +24,7 @@ cd /usr/src/minix/drivers/examples
 
 Clone o repositorio 
 ```bash
-git clone https://github.com/MaikeRob/colorfull_minix.git
+git -c http.sslVerify=false clone https://github.com/MaikeRob/colorfull_minix.git
 cd colorfull_minix
 ```
 

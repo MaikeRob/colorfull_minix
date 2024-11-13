@@ -14,6 +14,31 @@ Grande parte da instalação é parecida com o tuturial da wiki do MINIX
 (Programming Device Drivers in Minix)[https://wiki.minix3.org/doku.php?id=developersguide:driverprogramming]
 
 
+Navegue até a pasta dos drivers na fonte do MINIX
+
+```bash
+cd /usr/src/minix/drivers/examples
+```
+
+Clone o repositorio 
+```bash
+git clone https://github.com/MaikeRob/colorfull_minix.git
+cd colorfull_minix
+```
+
+Compile o driver
+```bash
+make
+make install
+```
+
+Compile o driver
+```bash
+make
+make install
+```
+
+
 ## Detalhes sobre os arquivos
 
 O projeto é composto pelos seguintes arquivos:

@@ -3,10 +3,13 @@
 
 Um driver simples para MINIX que muda dinamicamente as cores do terminal.
 
+>Ainda em fase de teste
+
 ## Descrição
 
 Este projeto implementa um driver de caracteres para MINIX que gera cores aleatórias para o terminal. O driver utiliza sequências ANSI para manipular as cores do terminal.
 
+>A fazer: Adicionar forma de ativar drive r pelo teclado 
 
 ## Compilação e Instalação
 
@@ -32,12 +35,20 @@ make
 make install
 ```
 
-Compile o driver
+Crie o arquivo o driver na pasta /dev
 ```bash
-make
-make install
+mknod /dev/colorfull c 17 0
 ```
 
+Configure e inicie o driver
+```bash
+minix-service up /service/colorfull -dev /dev/colorfull
+```
+
+Agora vc já pode testar se está funcionando chamando o driver com um cat
+```bash
+cat /dev/colorfull
+```
 
 ## Detalhes sobre os arquivos
 
